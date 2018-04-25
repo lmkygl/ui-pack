@@ -93,19 +93,5 @@
         .grid__inner {
             width: (100%/12);
         }
-    } // @include tablet {
-    //     width: 100%;
-    //     overflow-x: hidden;
-    //     .grid__inner {
-    //         width: 100% !important;
-    //        // background-color: darkkhaki;
-    //     }
-    // }
-    @include mobile {
-        width: 100%;
-        overflow-x: hidden;
-        .grid__inner {
-            width: 100% !important;
-        }
-    }
+    } 
 }
