@@ -1,4 +1,10 @@
 @import '../mixin/config.scss';
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+body,html {
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+   //overflow-x:hidden;   
+}
 .full__width {
     width: 100%;
 }
