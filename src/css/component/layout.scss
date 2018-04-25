@@ -1,11 +1,7 @@
-#content.content {
-    background: $main;
-    width: $content-width;
-    margin: 0 auto;
-
-    @include mobile {
-        overflow-x: hidden;
-        width: 100%;
-        background: $sub;
-    }   
+@import '../mixin/config.scss';
+.ui__pack__title {
+    font-size: 20px;
+}
+.grid_content {
+    color: $font-color;
 }

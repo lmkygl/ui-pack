@@ -1,0 +1,8 @@
+@import '../mixin/config.scss';
+.full__width {
+    width: 100%;
+}
+.container {
+    width: $max-width;
+    margin:0 auto;
+}
