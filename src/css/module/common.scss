@@ -5,4 +5,15 @@
 .container {
     width: $max-width;
     margin:0 auto;
+    @include tablet {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    @include mobile {
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+.spacing_top{
+    margin-top: 10px;
 }

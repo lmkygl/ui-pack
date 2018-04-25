@@ -1,7 +1,11 @@
 @import '../mixin/config.scss';
 .ui__pack__title {
-    font-size: 20px;
+    font-size: 30px;
+    margin: 30px 0;
 }
 .grid_content {
     color: $font-color;
+    background-color: #efefef;
+    padding: 10px;
+    text-align: center;
 }
