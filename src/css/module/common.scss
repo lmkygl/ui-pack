@@ -5,6 +5,10 @@ body,html {
     font-family: 'Noto Sans KR', sans-serif;
    //overflow-x:hidden;   
 }
+a {
+    text-decoration: none;
+    color: $font-color;
+}
 .full__width {
     width: 100%;
 }
