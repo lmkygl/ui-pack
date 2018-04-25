@@ -6,7 +6,6 @@
         var naviEvnet_type = e.type;
         var $target_underline = $target.find('.underline');
         if (naviEvnet_type === 'mouseenter') {
-
             TweenMax.to($target_underline, 0.3, {
                 width: '100%'
             });
