@@ -30,7 +30,10 @@ a {
 
 .underline {
     height: 2px;
-    background-color: #eee;
+    background-color: $bg-color;
     display: inline-block;
     width: 0;
+    display: block;
+    position: absolute;
+    bottom:0;
 }

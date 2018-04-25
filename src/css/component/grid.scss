@@ -27,6 +27,7 @@
         .grid__inner__item {
             position: relative;
             overflow: hidden;
+            text-align: center;
         }
     }
     @include grid-spacing($grid-spacing, $grid-spacing); // 그리드 확장
