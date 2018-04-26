@@ -3,40 +3,52 @@
     font-size: 30px;
     margin: 30px 0;
 }
+
 .grid_content {
     color: $font-color;
     background-color: #efefef;
     padding: 10px;
     text-align: center;
 }
+
 .border_bottom_line {
     padding-bottom: 40px;
     border-bottom: 1px solid rgb(201, 201, 201);
 }
+
 .link_content {
     padding: 10px 0;
     display: inline-block;
     font-size: 15px;
-    position: relative;   
-    margin-left: 10px; 
+    position: relative;
+    margin-left: 10px;
 }
 
-.slide_wrap{
+.slide_wrap {
     width: 900px;
     height: 500px;
     margin: 0 auto;
     border: 1px solid #eee;
-    .box{
-        height: 500px;
-        
+    .box {
+        height:500px;
+        .box_bg0 {
+            height: 100%;
+            background-color: burlywood;
+        }
+        .box_bg1 {
+            height: 100%;
+            background-color: greenyellow;
+        }
+        .box_bg2 {
+            height: 100%;
+            background-color: cadetblue;
+        }
+        .box_bg3 {
+            height: 100%;
+            background-color: salmon;
+        }
     }
-    .box_bg {
-        background-color: burlywood;
-    }
-    & .box_bg2 {
-        background-color: greenyellow;
-    }
-    & .box_bg3 {
-        background-color: wheat;
+    .bx-controls-direction{
+        display: none;
     }
 }
