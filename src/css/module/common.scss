@@ -37,3 +37,11 @@ a {
     position: absolute;
     bottom:0;
 }
+// bxslider jqeuery에 들어가있는 기본 css 수정
+.bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
