@@ -1,5 +1,7 @@
 (function () {
-    $('.bxslider').bxSlider({
+    var bx = $('.bxslider');
+    bx.bxSlider({
+        auto: true,
         mode: 'horizontal',
       //  slideWidth: '100%;'
         /*
