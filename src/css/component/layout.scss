@@ -87,4 +87,23 @@
         }
     }
 }
-.slide_section{ margin-top:20px;}
+
+.slide_section {
+    margin-top: 20px;
+}
+
+.tab_btn {
+    width: 40%;
+}
+
+.pannel {
+    margin-top: 20px;
+    &.grid{
+        .grid__inner {
+            .grid__inner__item {
+                text-align: left;
+                line-height:24px;
+            }
+        }
+    }
+}
