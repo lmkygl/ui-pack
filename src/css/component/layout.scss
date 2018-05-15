@@ -93,16 +93,28 @@
 }
 
 .tab_btn {
-    width: 40%;
+    width: 20%;
+    button {
+        border: none;
+        background-color: #eee;
+        padding:10px 20px;
+        font-size:15px;
+        cursor: pointer;
+    }
+    .active{
+        background-color:#000;
+        color:#fff;
+
+    }
 }
 
 .pannel {
     margin-top: 20px;
-    &.grid{
+    &.grid {
         .grid__inner {
             .grid__inner__item {
                 text-align: left;
-                line-height:24px;
+                line-height: 26px;
             }
         }
     }
