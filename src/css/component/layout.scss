@@ -92,31 +92,26 @@
     margin-top: 20px;
 }
 
-.tab_btn {
+.tab__btn__wrap {
     width: 20%;
-    button {
-        border: none;
-        background-color: #eee;
-        padding:10px 20px;
-        font-size:15px;
-        cursor: pointer;
+    .active {
+        button {
+            background-color: #000;
+            color: #fff;
+        }
     }
-    .active{
-        background-color:#000;
-        color:#fff;
-
+    button {
+        padding: 10px 10px;
+        background-color: #eee;
+        border: none;
+        text-align: center;
     }
 }
 
-.pannel {
-    margin-top: 20px;
-    &.grid {
-        .grid__inner {
-            //display:none;
-            .grid__inner__item {
-                text-align: left;
-                line-height: 26px;
-            }
-        }
+.pannel__list__wrap {
+    margin-top: 40px;
+    .pannel__list {
+        line-height: 22px;
+        font-size: 14px;
     }
 }
