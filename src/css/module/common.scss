@@ -1,20 +1,23 @@
 @import '../mixin/config.scss';
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-body,html {
+body,
+html {
     height: 100%;
-    font-family: 'Noto Sans KR', sans-serif;
-   //overflow-x:hidden;   
+    font-family: 'Noto Sans KR', sans-serif; //overflow-x:hidden;   
 }
+
 a {
     text-decoration: none;
     color: $font-color;
 }
+
 .full__width {
     width: 100%;
 }
+
 .container {
     width: $max-width;
-    margin:0 auto;
+    margin: 0 auto;
     @include tablet {
         width: 100%;
         overflow-x: hidden;
@@ -24,7 +27,8 @@ a {
         overflow-x: hidden;
     }
 }
-.spacing_top{
+
+.spacing_top {
     margin-top: 10px;
 }
 
@@ -35,13 +39,40 @@ a {
     width: 0;
     display: block;
     position: absolute;
-    bottom:0;
+    bottom: 0;
 }
-// bxslider jqeuery에 들어가있는 기본 css 수정
-.bx-wrapper {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: none;
-    background: transparent;
+
+.slider__visual__area {
+    position: relative;
+    overflow: hidden;
+    .slider_visual_wrap {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        .slider {
+            width: 500%;
+            height: 100%;
+            li {
+                float: left;
+                padding:50px;
+            }
+            .con1 {background-color:thistle;}
+            .con2 {background-color:darkorange;}
+            .con3 {background-color:steelblue;}
+            .con4 {background-color:seagreen;}
+            .con5 {background-color:crimson;}
+        }
+    }
+    .prve_btn {
+        cursor: pointer;
+        position: absolute;
+        left: 5%;
+        top: 40%;
+    }
+    .next_btn {
+        cursor: pointer;
+        position: absolute;
+        right: 5%;
+        top: 40%;
+    }
 }
