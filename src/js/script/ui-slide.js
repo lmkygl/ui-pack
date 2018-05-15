@@ -52,17 +52,7 @@
     }
 
     $btn.on('click', slide_effect);
-  /*  $slide_area.hammer().on('swipe', function (e) {
-        var direction = e.gesture.offsetDirection;
-        var $slider = $(e.currentTarget);
 
-        if (direction === 2) {
-            $slider.find('.next_btn').trigger('click');
-        } else {
-            $slider.find('.prve_btn').trigger('click');
-        }
-    });
-*/
     function startInterval() {
         clearInterval(interval);
         interval = setInterval(function () {

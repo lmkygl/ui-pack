@@ -48,13 +48,17 @@ a {
     .slider_visual_wrap {
         overflow: hidden;
         width: 100%;
+        height:200px;
         position: relative;
+        clear: both;
         .slider {
-            width: 500%;
+            width: 400%;
             height: 100%;
             li {
+                text-align: center;
+                width:25%;
+                height: 200px;
                 float: left;
-                padding:50px;
             }
             .con1 {background-color:thistle;}
             .con2 {background-color:darkorange;}
