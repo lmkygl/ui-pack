@@ -10,7 +10,6 @@
         var $target = $(e.currentTarget);
         var tab_id = $target.attr('data-id');
         var $tab_con = $('.pannel').find('[data-id="' + tab_id + '"]');
-        
         $this_tab_btn.removeClass('active');
         $target.addClass('active');
         $pannel.hide();
