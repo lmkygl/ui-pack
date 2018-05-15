@@ -29,7 +29,8 @@ gulp.task('vendorjs', function(){
         './node_modules/jquery/dist/jquery.min.js',
         './node_modules/gsap/src/minified/TweenMax.min.js',
         './node_modules/bxslider/src/js/jquery.bxslider.js',
-        './node_modules/owl.carousel/dist/owl.carousel.min.js'
+        './node_modules/owl.carousel/dist/owl.carousel.min.js',
+        './node_modules/hammerjs/hammer.min.js'
     ])
     .pipe(concat({
         path: 'vendor.js'
