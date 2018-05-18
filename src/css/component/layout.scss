@@ -93,18 +93,12 @@
 }
 
 .tab__btn__wrap {
-    width: 50%;
+    width: 20%;
     .active {
         button {
             background-color: #000;
             color: #fff;
         }
-    }
-    button {
-        padding: 10px 10px;
-        background-color: #eee;
-        border: none;
-        text-align: center;
     }
 }
 
@@ -114,4 +108,41 @@
         line-height: 22px;
         font-size: 14px;
     }
+}
+
+.tab__btn__area,
+.pannel__area {
+    text-align: left;
+    padding: 10px 0;
+    line-height: 1.2;
+    font-size: 14px;
+}
+
+.pannel_con {
+    margin-top: 10px;
+}
+.img__box__area {
+   min-height:300px;
+   //s height:100%;
+    position: relative;
+    overflow: hidden;
+    padding:10px 0;
+    //background-color:blue;
+    .img_box{
+        height: 100%;
+        position: absolute;
+        width:97%;
+        right:0;
+        &.box0 {
+            background-color:greenyellow;
+        }
+        &.box1 {
+            background-color:darkcyan;
+        }
+        &.box2 {
+            background-color:rgb(196, 225, 65);
+        }
+        
+    }
+    
 }
