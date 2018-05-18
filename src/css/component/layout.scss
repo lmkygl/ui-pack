@@ -1,5 +1,4 @@
 @import '../mixin/config.scss';
-
 .grid_content {
     color: $font-color;
     background-color: #efefef;
@@ -83,14 +82,52 @@
     margin-top: 20px;
 }
 
-.basic__tab{
-
+.basic__pannel__area{
+    .pannel_con {
+        display:none;
+        &._active {
+            display: block;
+        }
+    } 
 }
 
-.tab__btn__area,
-.pannel__area,
+.fade__tab__pannel__area {
+    position: relative;
+    min-height: 300px;
+    .pannel_con {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display:none;
+        &._active {
+            display: block;
+        }
+    }
+}
+
 .img__box__area {
-    text-align: left; 
+    position: relative;
+    min-height: 300px;
+    .img_box {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 90%;
+        height:100%;
+        display:none;
+        &._active {
+            display: block;
+        }
+        &.box0 {
+            background-color: greenyellow;
+        }
+        &.box1 {
+            background-color: darkcyan;
+        }
+        &.box2 {
+            background-color: rgb(196, 225, 65);
+        }
+    }
 }
 
 // .pannel__area {
@@ -109,7 +146,6 @@
 //     font-size: 14px;
 //     }
 // }
-
 // .img__box__area {
 //     min-height: 500px;
 //     position: relative;
