@@ -1,13 +1,4 @@
 @import '../mixin/config.scss';
-.ui__pack__title {
-    font-size: 30px;
-    margin: 30px 0;
-}
-
-.ui__pack__sub__title {
-    text-align: left;
-    margin: 10px 0;
-}
 
 .grid_content {
     color: $font-color;
@@ -92,22 +83,8 @@
     margin-top: 20px;
 }
 
-.tab__btn__wrap {
-    width: 20%;
-    .active {
-        button {
-            background-color: #000;
-            color: #fff;
-        }
-    }
-}
+.basic__tab{
 
-.pannel__list__wrap {
-    margin-top: 40px;
-    .pannel__list {
-        line-height: 22px;
-        font-size: 14px;
-    }
 }
 
 .tab__btn__area,
@@ -116,45 +93,45 @@
     text-align: left; 
 }
 
-.pannel__area {
-    transition: height .5s;
-    position: relative;
-    min-height: 500px;
-    .pannel_con {
-       display:none;
-        &._active{
-            display:block;
-        }
-        position: absolute;
-        left: 0;
-        top: 5%;
-        line-height: 1.2;
-    font-size: 14px;
-    }
-}
+// .pannel__area {
+//     transition: height .5s;
+//     position: relative;
+//     min-height: 500px;
+//     .pannel_con {
+//        display:none;
+//         &._active{
+//             display:block;
+//         }
+//         position: absolute;
+//         left: 0;
+//         top: 5%;
+//         line-height: 1.2;
+//     font-size: 14px;
+//     }
+// }
 
-.img__box__area {
-    min-height: 500px;
-    position: relative;
-    overflow: hidden; 
-    .img_box {
-        height: 100%;
-        position: absolute;
-        width: 90%;
-        right: 0;
-        top: 7%;
-       display:none;
-        &._active{
-            display:block;
-        }
-        &.box0 {
-            background-color: greenyellow;
-        }
-        &.box1 {
-            background-color: darkcyan;
-        }
-        &.box2 {
-            background-color: rgb(196, 225, 65);
-        }
-    }
-}
+// .img__box__area {
+//     min-height: 500px;
+//     position: relative;
+//     overflow: hidden; 
+//     .img_box {
+//         height: 100%;
+//         position: absolute;
+//         width: 90%;
+//         right: 0;
+//         top: 7%;
+//        display:none;
+//         &._active{
+//             display:block;
+//         }
+//         &.box0 {
+//             background-color: greenyellow;
+//         }
+//         &.box1 {
+//             background-color: darkcyan;
+//         }
+//         &.box2 {
+//             background-color: rgb(196, 225, 65);
+//         }
+//     }
+// }
