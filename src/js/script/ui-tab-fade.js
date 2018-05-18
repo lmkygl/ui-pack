@@ -1,7 +1,7 @@
 //tab 버튼 클릭시 fade in out
 (function () {
-    var $data_tab_id = $('[data-id]');
-    var $tab_wrap = $('[data-ui="tab_button_wrap"]');
+    var $data = $('[data-id-value]');
+    var $tab_wrap = $('[data-ui="tab__btn__area"]');
     var $tab_btn = $tab_wrap.find('.tab__btn');
     var speed = 200;
 

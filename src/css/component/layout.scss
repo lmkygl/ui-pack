@@ -118,31 +118,31 @@
     font-size: 14px;
 }
 
-.pannel_con {
-    margin-top: 10px;
+.pannel__area {
+    transition: height .5s;
+    .pannel_con {
+        margin-top: 10px;
+    }
 }
+
 .img__box__area {
-   min-height:300px;
-   //s height:100%;
+    min-height: 300px;
     position: relative;
     overflow: hidden;
-    padding:10px 0;
-    //background-color:blue;
-    .img_box{
+    padding: 10px 0;
+    .img_box {
         height: 100%;
         position: absolute;
-        width:97%;
-        right:0;
+        width: 97%;
+        right: 0;
         &.box0 {
-            background-color:greenyellow;
+            background-color: greenyellow;
         }
         &.box1 {
-            background-color:darkcyan;
+            background-color: darkcyan;
         }
         &.box2 {
-            background-color:rgb(196, 225, 65);
+            background-color: rgb(196, 225, 65);
         }
-        
     }
-    
 }
