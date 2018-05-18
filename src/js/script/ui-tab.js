@@ -2,40 +2,38 @@
 (function () {
     var $tab_btn_area = $('[data-ui="tab__btn__area"]');
     var $btn = $tab_btn_area.find('button');
-    var $pannel = $('[data-ui="tab__pannel__list"]').find('.pannel_con');
 
-    $tab_btn_area.each(function(e){
-        var $btn_w = $('[data-ui="tab__btn__area"]');
-        var $btn = $btn_w.find('button');
-        var Btn = $tab_btn_area.find('button');
+    function tab_effect(e) {
+        var $target = $(e.currentTarget);
+        var $parent = $target.parent();
+        var $button = $parent.find('button');
+        var $pannel_parent = $parent.siblings('.basic__pannel__area');
+        var $pannel_parent2 = $parent.parent();
+        var $pannel = $pannel_parent.find('.pannel_con');
+        var $pannel2 = $pannel_parent2.find('.tab_pannel_content');
+        var tab_id;
+
+        $button.removeClass('active');
+        $target.addClass('active');
+
+        tab_id = $target.attr('data-id');
+
+        console.log($fade_tab_con);
+        var $basic_tab_con = $pannel_parent.find('[data-id="' + tab_id + '"]');
+        var $fade_tab_con = $pannel2.find('[data-id="' + tab_id + '"]');
         
-        function tab_effect(e){        
-            $btn.removeClass('active');
-        $(this).addClass('active');
-        console.log($(this));    
-        }
-    });
+        $pannel.hide();
+        $basic_tab_con.show();
 
-
-
-    function tab_effect(e){        
-        $tab_btn_area.each(function(e){
-            var $btn_w = $('[data-ui="tab__btn__area"]');
-            var $btn = $btn_w.find('button');
-            var Btn = $tab_btn_area.find('button');
-            
-
-            $btn.removeClass('active');
-            $(this).addClass('active');
-            console.log($(this));
-        });
+        $pannel2.fadeOut();
+        $fade_tab_con.fadeIn();
     }
 
     // var $tab_btn_wrap = $('[data-ui="tab_button_wrap"]');
     // var $this_tab_btn = $tab_btn_wrap.find('.icon__sort__wrap');
     // var $pannel = $('.pannel__list__wrap').find('.pannel__list');
 
-    
+
 
     // function tab_button(e) {
     //     var $target = $(e.currentTarget);
@@ -61,14 +59,14 @@
     //     var tab_id;
     //     var tab_container = $('.tab_pannel_content').find('div');
     //     var $tab_con = $('.tab_pannel_content').find('[data-id="' + tab_id + '"]');
-        
+
     //     tab_id = $target.attr('data-id');
     //     $tab_btn.removeClass('active');
     //     $target.addClass('active');
 
     //     tab_container.fadeOut();
     //     $tab_con.fadeIn();
-       
+
     // }
     // $tab_btn.on('click', tab_button);
 
