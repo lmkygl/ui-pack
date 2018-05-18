@@ -19,10 +19,9 @@
 
         tab_id = $target.attr('data-id');
 
-       
         var $basic_tab_con = $pannel_parent.find('[data-id="' + tab_id + '"]');
         var $fade_tab_con = $pannel2.find('[data-id="' + tab_id + '"]');
-        console.log($pannel2); 
+       
         $pannel.hide();
         $basic_tab_con.show();
 
