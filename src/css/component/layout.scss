@@ -132,7 +132,8 @@
 
 .toggle__box__container {
     margin-top: 20px;
-    max-height: 100px;
+    min-height: 80px;
+    max-height: 120px;
     line-height: 1.5;
     font-size: 14px;
     overflow: hidden;
