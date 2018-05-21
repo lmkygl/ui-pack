@@ -130,15 +130,76 @@
     }
 }
 
-.toggle__box__container {
-    margin-top: 20px;
-    min-height: 80px;
-    max-height: 120px;
-    line-height: 1.5;
-    font-size: 14px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
+.grid {
+    .grid__inner {
+        .grid__inner__item {
+            text-align: left;
+            .switch {
+                position: relative;
+                .switch__title {
+                    color: #999;
+                    padding: 10px 0;
+                    font-weight: 600;
+                }
+                .tgl {
+                    display: none;
+                    &,
+                    &:after,
+                    &:before,
+                    & *,
+                    & *:after,
+                    & *:before,
+                    &+.tgl-btn {
+                        box-sizing: border-box;
+                        &::selection {
+                            background: none;
+                        }
+                    }
+                    +.tgl_btn {
+                        outline: 0;
+                        display: block;
+                        width: 4em;
+                        height: 2em;
+                        position: relative;
+                        cursor: pointer;
+                        user-select: none;
+                        margin: 0 auto;
+                        &:after,
+                        &:before {
+                            position: relative;
+                            display: block;
+                            content: "";
+                            width: 50%;
+                            height: 100%;
+                        }
+                        &:after {
+                            left: 0;
+                        }
+                        &:before {
+                            display: none;
+                        }
+                    }
+                    &:checked+.tgl_btn:after {
+                        left: 50%;
+                    }
+                }
+                .tgl_light {
+                    +.tgl_btn {
+                        background: #f0f0f0;
+                        border-radius: 2em;
+                        padding: 2px;
+                        transition: all .4s ease;
+                        &:after {
+                            border-radius: 50%;
+                            background: #fff;
+                            transition: all .2s ease;
+                        }
+                    }
+                    &:checked+.tgl_btn {
+                        background: #9FD6AE;
+                    }
+                }
+            }
+        }
+    }
 }
