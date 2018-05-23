@@ -6,23 +6,24 @@
     var $close_btn = $modal_wrap.find('.trigger');
 
     function modal_event(e) {
-        var $target = $(e.target);
-        var $bg = $('.modal__wrap');
-        $bg.addClass('open');
+        var $target = $(e.currentTarget);
+        var $target_parent = $target.parent();
+        var modal = $target_parent.siblings();
+        modal.addClass('open');
     }
 
-    function modal_close(e) {
-        var target = $(e.target);
-        $modal_wrap.removeClass('open');
-    }
+    // function modal_close(e) {
+    //     var target = $(e.target);
+    //     $modal_wrap.removeClass('open');
+    // }
 
-    function modal_close2(e) {
-        var target = $(e.target);
-        $(this).removeClass('open');
-    }
+    // function modal_close2(e) {
+    //     var target = $(e.target);
+    //     $(this).removeClass('open');
+    // }
 
 
     $btn.on('click', modal_event);
-    $close_btn.on('click', modal_close);
-    $modal_wrap.on('click', modal_close);
+    // $close_btn.on('click', modal_close);
+    // $modal_wrap.on('click', modal_close);
 }());
