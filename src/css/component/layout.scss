@@ -142,17 +142,13 @@
         color: #fff;
         border-radius: 0;
         background-color: #e2525c;
-        // position: absolute;
-        // left: 50%;
-        // top:50%;
-        // margin-left: -100px;
         
     }
     .btn2{
         background-color: rgb(63, 87, 28);
     }
     .btn3{
-        background-color: saddlebrown;
+        background-color: rgb(58, 77, 187);
     }
 }
 
@@ -166,6 +162,13 @@
     visibility: hidden;
     opacity: 0;
     transition: all 0.25s ease-in-out;
+    z-index: 1;
+    &.modal__w2{
+        background-color: rgba(243, 108, 108, 0.8);
+    }
+    &.modal__w3{
+        background-color: rgba(207, 164, 85, 0.8);
+    }
 }
 
 .modal__wrap.open {
@@ -201,7 +204,7 @@
         background-color: rgb(63, 87, 28);
     }
     &.head3 {
-        background-color: saddlebrown;
+        background-color: rgb(58, 77, 187);
     }
 }
 
@@ -230,6 +233,6 @@
         color:rgb(63, 87, 28);
     }
     &.job3 {
-        color:saddlebrown;
+        color:rgb(58, 77, 187);
     }
 }

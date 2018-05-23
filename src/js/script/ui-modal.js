@@ -10,20 +10,21 @@
         var $target_parent = $target.parent();
         var modal = $target_parent.siblings();
         modal.addClass('open');
+        // return false;
     }
 
-    // function modal_close(e) {
-    //     var target = $(e.target);
-    //     $modal_wrap.removeClass('open');
-    // }
+    function modal_close(e) {
+        var target = $(e.target);
+        $modal_wrap.removeClass('open');
+    }
 
-    // function modal_close2(e) {
-    //     var target = $(e.target);
-    //     $(this).removeClass('open');
-    // }
+    function modal_close2(e) {
+        var target = $(e.target);
+        $(this).removeClass('open');
+    }
 
 
     $btn.on('click', modal_event);
-    // $close_btn.on('click', modal_close);
-    // $modal_wrap.on('click', modal_close);
+    $close_btn.on('click', modal_close);
+    $modal_wrap.on('click', modal_close);
 }());
