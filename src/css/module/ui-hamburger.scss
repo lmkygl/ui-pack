@@ -1,0 +1,53 @@
+
+.menu__btn__area {
+    width: 100%;
+    height: 90px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    .ham {
+        height: 100%;
+    }
+    span {
+        display: block;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        height: 3px;
+        width: 32px;
+        background-color: #000;
+        z-index : 2;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    .span__center {
+        top: 45px;
+    }
+    .span__before {
+        top: 35px;
+        left: 0;
+    }
+    .span__after {
+        bottom: 33px;
+        left: 0;
+    }
+    .is-active .span__center {
+        background-color: transparent;
+    }
+
+    .m_hamburger1.is-active .span__before{
+        -webkit-transform: translateY(13px) rotate(45deg);
+        -ms-transform: translateY(13px) rotate(45deg);
+        -o-transform: translateY(13px) rotate(45deg);
+        transform: translateY(13px) rotate(45deg);
+      }
+      
+      .m_hamburger1.is-active .span__after{
+        -webkit-transform: translateY(-13px) rotate(-45deg);
+        -ms-transform: translateY(-13px) rotate(-45deg);
+        -o-transform: translateY(-13px) rotate(-45deg);
+        transform: translateY(-13px) rotate(-45deg);
+      }
+}

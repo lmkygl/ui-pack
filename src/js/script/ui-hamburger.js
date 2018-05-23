@@ -7,28 +7,7 @@
 
     function navigation__click(e) {
         var target = $(e.currentTarget);
-        target.toggleClass('m_hamburgercloseactive');
-        console.log(target);
-
-        if (target.hasClass('m_hamburgercloseactive')) {
-            TweenMax.to($span_before, 0.2, {
-                rotation: -45,
-                top: 40
-            });
-            TweenMax.to($span_after, 0.2, {
-                rotation: 45,
-                bottom: 47
-            });
-        } else {
-            TweenMax.to($span_before, 0.2, {
-                rotation: 0,
-                top: 35
-            });
-            TweenMax.to($span_after, 0.2, {
-                rotation: 0,
-                bottom: 33
-            });
-        }
+        target.toggleClass('is-active');
     }
 
     $hamburger.on('click', navigation__click);
