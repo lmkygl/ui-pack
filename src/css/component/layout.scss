@@ -163,11 +163,19 @@
     opacity: 0;
     transition: all 0.25s ease-in-out;
     z-index: 1;
+    &.open .modal__container {
+        margin-top: -200px;
+        opacity: 1;
+    }
     &.modal__w2{
-        background-color: rgba(243, 108, 108, 0.8);
+        background-color: rgba(75, 158, 158, 0.8);
+        &.open .modal__container {
+            margin-top: -200px;
+            opacity: 1;
+        }
     }
     &.modal__w3{
-        background-color: rgba(207, 164, 85, 0.8);
+        background-color: rgba(79, 67, 121, 0.8);
     }
 }
 
@@ -178,7 +186,7 @@
 
 .modal__container {
     width: 600px;
-    height: 400px;
+    height: 300px;
     display: block;
     margin: 50% 0 0 -300px;
     position: relative;
@@ -189,10 +197,8 @@
     transition: all 0.5s ease-in-out;
 }
 
-.modal__wrap.open .modal__container {
-    margin-top: -200px;
-    opacity: 1;
-}
+
+
 
 .modal__head {
     width: 90%;
