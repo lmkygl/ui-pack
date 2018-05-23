@@ -142,12 +142,11 @@
         color: #fff;
         border-radius: 0;
         background-color: #e2525c;
-        
     }
-    .btn2{
+    .btn2 {
         background-color: rgb(63, 87, 28);
     }
-    .btn3{
+    .btn3 {
         background-color: rgb(58, 77, 187);
     }
 }
@@ -167,14 +166,14 @@
         margin-top: -200px;
         opacity: 1;
     }
-    &.modal__w2{
+    &.modal__w2 {
         background-color: rgba(75, 158, 158, 0.8);
         &.open .modal__container {
             margin-top: -200px;
             opacity: 1;
         }
     }
-    &.modal__w3{
+    &.modal__w3 {
         background-color: rgba(79, 67, 121, 0.8);
     }
 }
@@ -197,16 +196,13 @@
     transition: all 0.5s ease-in-out;
 }
 
-
-
-
 .modal__head {
     width: 90%;
     height: 32px;
     padding: 12px 30px;
     overflow: hidden;
     background-color: #e2525c;
-    &.head2{
+    &.head2 {
         background-color: rgb(63, 87, 28);
     }
     &.head3 {
@@ -229,16 +225,32 @@
 .good_job {
     text-align: center;
     color: #e2525c;
-    h1{
+    h1 {
         font-size: 45px;
     }
     .fa-thumbs-o-up {
         font-size: 60px;
     }
     &.job2 {
-        color:rgb(63, 87, 28);
+        color: rgb(63, 87, 28);
     }
     &.job3 {
-        color:rgb(58, 77, 187);
+        color: rgb(58, 77, 187);
     }
+}
+
+.hamburger {
+    padding: 10px 5px;
+}
+
+.hamburger .line {
+    width: 50px;
+    height: 5px;
+    background-color: #000;
+    display: block;
+    margin: 8px auto;
+}
+
+.hamburger:hover {
+    cursor: pointer;
 }
