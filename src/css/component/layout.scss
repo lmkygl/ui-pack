@@ -159,12 +159,12 @@
     top: 0;
     left: 0;
     background: rgba(41, 171, 164, 0.8);
-    visibility: hidden;
-    opacity: 0;
+    //visibility: hidden;
+    opacity: 1;
     transition: all 0.25s ease-in-out;
 }
 
-.modal-wrapper.open {
+.modal__wrap.open {
     opacity: 1;
     visibility: visible;
 }
@@ -182,7 +182,7 @@
     transition: all 0.5s ease-in-out;
 }
 
-.modal-wrapper.open .modal {
+.modal__wrap.open .modal__container {
     margin-top: -200px;
     opacity: 1;
 }
