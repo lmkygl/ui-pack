@@ -1,6 +1,5 @@
 .hamburger {
-    padding: 10px;
-    background-color:gainsboro;
+    padding: 20px;
 }
 
 .hamburger .line {
@@ -40,13 +39,13 @@
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+
 .hamburger_9.is-active:before {
     border: 5px solid #ecf0f1;
 }
 
-/*
-    css 사용할 경우 ie10 부터 기준을 할 경우.
-    
+/* css 사용할 경우 ie10 부터 기준을 할 경우.*/
+
 .hamburger_1.is-active .line:nth-child(1) {
     -webkit-transform: translateY(13px) rotate(45deg);
     -ms-transform: translateY(13px) rotate(45deg);
@@ -113,7 +112,6 @@
     transform: translateX(10px) rotate(-45deg);
 }
 
-
 .hamburger_5.is-active {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -160,7 +158,6 @@
     -o-transform: translateY(-15px) rotate(-45deg);
     transform: translateY(-15px) rotate(-45deg);
 }
-
 
 .hamburger_6.is-active {
     -webkit-transition: all 0.3s ease-in-out;
@@ -263,7 +260,6 @@
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
-
 
 .hamburger_9.is-active .line {
     width: 35px;
@@ -375,5 +371,3 @@
     -o-transform: translateX(100%);
     transform: translateX(100%);
 }
-
-*/
