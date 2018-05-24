@@ -19,6 +19,31 @@
 .hamburger_1.is-active .line:nth-child(2) {
     opacity: 0;
 }
+
+.hamburger_9 {
+    position: relative;
+}
+
+.hamburger_9:before {
+    content: "";
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 70px;
+    height: 70px;
+    border: 5px solid transparent;
+    top: calc(50% - 35px);
+    left: calc(50% - 35px);
+    border-radius: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.hamburger_9.is-active:before {
+    border: 5px solid #ecf0f1;
+}
+
 /*
     css 사용할 경우 ie10 부터 기준을 할 경우.
     
@@ -174,4 +199,92 @@
     -o-transform: translateY(-13px) rotate(90deg);
     transform: translateY(-13px) rotate(90deg);
 }
+
+.hamburger_7.is-active .line:nth-child(1) {
+    width: 30px;
+}
+
+.hamburger_7.is-active .line:nth-child(2) {
+    width: 40px;
+}
+
+.hamburger_7.is-active .line {
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.hamburger_8.is-active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger_8.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(13px);
+    -ms-transform: translateY(13px);
+    -o-transform: translateY(13px);
+    transform: translateY(13px);
+}
+
+.hamburger_8.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-13px) rotate(90deg);
+    -ms-transform: translateY(-13px) rotate(90deg);
+    -o-transform: translateY(-13px) rotate(90deg);
+    transform: translateY(-13px) rotate(90deg);
+}
+
+.hamburger_9 {
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger_9.is-active {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.hamburger_9:before {
+    content: "";
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 70px;
+    height: 70px;
+    border: 5px solid transparent;
+    top: calc(50% - 35px);
+    left: calc(50% - 35px);
+    border-radius: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.hamburger_9.is-active .line {
+    width: 35px;
+}
+
+.hamburger_9.is-active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger_9.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(13px);
+    -ms-transform: translateY(13px);
+    -o-transform: translateY(13px);
+    transform: translateY(13px);
+}
+
+.hamburger_9.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-13px) rotate(90deg);
+    -ms-transform: translateY(-13px) rotate(90deg);
+    -o-transform: translateY(-13px) rotate(90deg);
+    transform: translateY(-13px) rotate(90deg);
+}
+
 */

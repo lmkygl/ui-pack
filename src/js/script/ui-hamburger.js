@@ -92,6 +92,46 @@
                     rotation: -90,
                 });
             }
+            else if ($target.hasClass('hamburger_7')) {
+                TweenMax.to(this, 0.2,{
+                    rotation: 30
+                });
+                TweenMax.to($line_first, 0.3, {
+                   width: 30,
+                });
+                TweenMax.to($line_sec, 0.2, {
+                    width: 40
+                });
+            }
+            else if ($target.hasClass('hamburger_8')) {
+                TweenMax.to($line_first, 0.2, {
+                    y: 13,
+                });
+                TweenMax.to($line_sec, 0.2, {
+                    opacity:0
+                });
+                TweenMax.to($line_last, 0.2, {
+                    y: -13,
+                    rotation: -90,
+                });
+            }
+            else if ($target.hasClass('hamburger_9')) {
+                TweenMax.to(this, 0.2,{
+                    rotation: 45
+                });
+                TweenMax.to($line_first, 0.2, {
+                    y: 13,
+                    width: 35,
+                });
+                TweenMax.to($line_sec, 0.2, {
+                    opacity:0
+                });
+                TweenMax.to($line_last, 0.2, {
+                    y: -13,
+                    rotation: 90,
+                    width: 35
+                });
+            }
 
         } else {
             TweenMax.to(this, 0.2,{
