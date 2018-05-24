@@ -5,11 +5,30 @@
 
     function hamburger_motion(e){
         var $target = $(e.target);
-        
-        $(this).toggleClass('is-active');
-        
-        if ($target.hasClass('hamburger_1')) {
+        var $line_first = $target.find('span:nth-child(1)');
+        var $line_last = $target.find('span:nth-child(3)');
 
+        $(this).toggleClass('is-active');
+        console.log($line_first);
+        if ($target.hasClass('is-active')) {
+            
+            TweenMax.to($line_first, 0.2, {
+                y:13,
+                rotation: 45,
+            });
+            TweenMax.to($line_last, 0.2, {
+                y:-13,
+                rotation: -45,
+            });
+        }else{
+            TweenMax.to($line_first, 0.2, {
+                y: 0,
+                rotation:0,
+            });
+            TweenMax.to($line_last, 0.2, {
+                y:0,
+                rotation: 0,
+            });
         }
     }
     $btn.on('click',hamburger_motion);
