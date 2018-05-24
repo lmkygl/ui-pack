@@ -1,14 +1,11 @@
-// hamburger button 클릭시 네비게이션 보임 
-(function () {
-    var $hamburger_wrap = $('[data-ui="hamburger_wrap"]');
-    var $hamburger = $hamburger_wrap.find('[data-ui="hamburger__btn"]');
-    var $span_before = $('.span__before');
-    var $span_after = $('.span__after');
+// hamburger 버튼 클릭시 모션 tweenMax 이용
+(function(){
+    var $btn_wrap = $('[data-ui="hamburger_wrap"]');
+    var $btn = $btn_wrap.find('.hamburger');
 
-    function navigation__click(e) {
-        var target = $(e.currentTarget);
-        target.toggleClass('is-active');
+    function hamburger_motion(e){
+        var target = $(e.target);
+        
     }
-
-    $hamburger.on('click', navigation__click);
+    $btn.on('click',hamburger_motion);
 }());
