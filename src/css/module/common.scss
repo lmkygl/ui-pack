@@ -129,3 +129,17 @@ button {
     width: 95%;
     line-height: 22px;
 }
+
+// 
+
+input:-ms-input-placeholder { color: #ccc; }
+// Internet Explorer 10 이상에 적용
+
+input::-webkit-input-placeholder { color: #ccc; } 
+//  Webkit, Blink, Edge에 적용
+
+input::-moz-placeholder { color: #ccc; }
+// Mozilla Firefox 4 부터 18에 적용
+
+input::-moz-placeholder { color: #ccc; }
+// Mozilla Firefox 19 이상에 적용
