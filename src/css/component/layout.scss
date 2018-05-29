@@ -30,19 +30,19 @@
         height: 400px;
         .box_bg0 {
             height: 100%;
-            background-color: burlywood;
+            background-color:$box-bg;
         }
         .box_bg1 {
             height: 100%;
-            background-color: greenyellow;
+            background-color:$box-bg;
         }
         .box_bg2 {
             height: 100%;
-            background-color: cadetblue;
+            background-color: $box-bg;
         }
         .box_bg3 {
             height: 100%;
-            background-color: salmon;
+            background-color: $box-bg;
         }
     }
     .bx-controls-direction {
@@ -61,19 +61,19 @@
         overflow: hidden;
         .box_bg0 {
             height: 200px;
-            background-color: burlywood;
+            background-color: $box-bg;
         }
         .box_bg1 {
             height: 200px;
-            background-color: greenyellow;
+            background-color: $box-bg;
         }
         .box_bg2 {
             height: 200px;
-            background-color: cadetblue;
+            background-color: $box-bg;
         }
         .box_bg3 {
             height: 200px;
-            background-color: salmon;
+            background-color: $box-bg;
         }
     }
 }
@@ -119,13 +119,13 @@
             display: block;
         }
         &.box0 {
-            background-color: greenyellow;
+            background-color: $box-bg;
         }
         &.box1 {
-            background-color: darkcyan;
+            background-color: $box-bg;
         }
         &.box2 {
-            background-color: rgb(196, 225, 65);
+            background-color: $box-bg;
         }
     }
 }
@@ -139,15 +139,15 @@
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
-        color: #fff;
+        color: $font-color;
         border-radius: 0;
-        background-color: #e2525c;
+        background-color: $box-bg;
     }
     .btn2 {
-        background-color: rgb(63, 87, 28);
+        background-color: $box-bg;
     }
     .btn3 {
-        background-color: rgb(58, 77, 187);
+        background-color: $box-bg;
     }
 }
 
