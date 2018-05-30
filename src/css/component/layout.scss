@@ -238,29 +238,3 @@
         color: rgb(58, 77, 187);
     }
 }
-
-.input__box__wrap {
-    text-align: left;
-    .input_box{
-        margin: 10px 0;
-        input {
-            max-width: 300px;
-            min-height: 20px;
-            width: 100%;
-            height: 100%;
-            border:1px solid #ccc;
-            text-indent: 10px;
-        }
-    }
-    
-}
-.check__box__wrap{
-    text-align: left;
-    label {
-        font-size: 14px;
-    }
-}
-.btn__wrap{
-    margin-top: 10px;
-    text-align:left;
-}
