@@ -270,7 +270,7 @@ label {
         }
     }
     &+label {
-        background-color: #ddd;
+        background-color: $box-bg;
         border-radius: 20px;
         &:after {
             background-color: #fff;
@@ -282,3 +282,39 @@ label {
         }
     }
 }
+/* teleport */
+#teleport1,#teleport2,#teleport3{
+    &:checked+label{
+      &.red{border-color: #ECA9A7;&:before{background-color: #D9534F;}}
+      &.green{border-color: #AEDCAE;&:before{background-color: #5CB85C;}}
+      &:after{
+        left: -13px;
+      }
+      &:before{
+        width: 12px;
+        height: 12px;
+        left: calc(100% - 15px);
+      }
+    }
+    &+label{
+      border: 2px solid #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+      &:after{
+        background-color:$box-bg;
+        border-radius: 10px;
+        width: 12px;
+        height: 12px;
+        top: 2px;
+        left: 2px;
+      }
+      &:before{
+        background-color: $box-bg;
+        border-radius: 10px;
+        left: 100%;
+        width: 12px;
+        height: 12px;
+        top: 2px;
+      }
+    }
+  }
