@@ -1,23 +1,284 @@
-input[type="checkbox"]{
+@import '../mixin/config.scss';
+.input__wrap {
+    text-align: left;
+    padding-bottom: 5px;
+    min-height: 30px;
+}
+
+input[type="checkbox"] {
     display: none;
 }
-label{
+
+label {
     display: inline-block;
-    width: 40px;
+    width: 50px;
     height: 20px;
     position: relative;
     transition: 0.3s;
     margin: 0px 20px;
     box-sizing: border-box;
-    &:after,&:before{
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      width: 20px;
-      height: 20px;
-      transition: 0.3s;
-      cursor: pointer;
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 20px;
+        height: 20px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+}
+
+/* simple checkbox */
+
+#simple1,
+#simple2,
+#simple3 {
+    &:checked+label {
+        &.red {
+            background-color: #ECA9A7;
+            &:after {
+                background-color: #D9534F;
+            }
+        }
+        &.green {
+            background-color: #AEDCAE;
+            &:after {
+                background-color: #5CB85C;
+            }
+        }
+        &:after {
+            left: calc(100% - 15px);
+        }
+    }
+    &+label {
+        background-color: $box-bg;
+        border-radius: 20px;
+        box-shadow: 1px 1px 3px #aaa;
+        height: 15px;
+        &:after {
+            height: 15px;
+            width: 15px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 1px 1px 3px #aaa;
+        }
+    }
+}
+
+/* Material design */
+
+#md1,
+#md2,
+#md3 {
+    &:checked+label {
+        &.red {
+            background-color: #ECA9A7;
+            &:after {
+                background-color: #D9534F;
+            }
+        }
+        &.green {
+            background-color: #AEDCAE;
+            &:after {
+                background-color: #5CB85C;
+            }
+        }
+        &:after {
+            left: calc(100% - 15px);
+        }
+    }
+    &+label {
+        background-color: $box-bg;
+        border-radius: 15px;
+        height: 10px;
+        &:after {
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            border-radius: 50%;
+            top: -3px;
+            box-shadow: 0px 0px 3px #aaa;
+        }
+    }
+}
+
+/* Material design small */
+
+#md_sm1,
+#md_sm2,
+#md_sm3 {
+    &:checked+label {
+        &.red {
+            background-color: #ECA9A7;
+            &:after {
+                background-color: #D9534F;
+            }
+        }
+        &.green {
+            background-color: #AEDCAE;
+            &:after {
+                background-color: #5CB85C;
+            }
+        }
+        &:after {
+            left: calc(100% - 15px);
+        }
+    }
+    &+label {
+        background-color: $box-bg;
+        height: 3px;
+        &:after {
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            border-radius: 50%;
+            top: -7px;
+            box-shadow: 0px 0px 3px #aaa;
+        }
+    }
+}
+
+/* border */
+
+#border1,
+#border2,
+#border3 {
+    &:checked+label {
+        &.red {
+            border-color: #ECA9A7;
+            &:after {
+                background-color: #D9534F;
+            }
+        }
+        &.green {
+            border-color: #AEDCAE;
+            &:after {
+                background-color: #5CB85C;
+            }
+        }
+        &:after {
+            left: calc(100% - 14px);
+        }
+    }
+    &+label {
+        border: 2px solid $box-bg;
+        border-radius: 20px;
+        &:after {
+            background-color: #ddd;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            top: 2px;
+            left: 2px;
+        }
+    }
+}
+
+/* Inset */
+
+#inset1,
+#inset2,
+#inset3 {
+    &:checked+label {
+        &.red {
+            background-color: #ECA9A7;
+            &:after {
+                background-color: #D9534F;
+            }
+        }
+        &.green {
+            background-color: #AEDCAE;
+            &:after {
+                background-color: #5CB85C;
+            }
+        }
+        &:after {
+            left: calc(100% - 18px);
+        }
+    }
+    &+label {
+        background-color: $box-bg;
+        border-radius: 20px;
+        &:after {
+            background-color: #fff;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            top: 2px;
+            left: 2px;
+        }
+    }
+}
+
+/* box checkbox */
+
+#box_ch1,
+#box_ch2,
+#box_ch3 {
+    &:checked+label {
+        &.red {
+            background-color: #ECA9A7;
+            &:after {
+                background-color: #D9534F;
+            }
+        }
+        &.green {
+            background-color: #AEDCAE;
+            &:after {
+                background-color: #5CB85C;
+            }
+        }
+        &:after {
+            left: calc(100% - 18px);
+        }
+    }
+    &+label {
+        background-color: $box-bg;
+        &:after {
+            background-color: #fff;
+            width: 16px;
+            height: 16px;
+            top: 2px;
+            left: 2px;
+        }
+    }
+}
+
+/* full flex */
+
+#full_flex1,
+#full_flex2,
+#full_flex3 {
+    &:checked+label {
+        &.red {
+            background-color: #D9534F;
+            &:after {
+                background-color: #ECA9A7;
+            }
+        }
+        &.green {
+            background-color: #5CB85C;
+            &:after {
+                background-color: #AEDCAE;
+            }
+        }
+        &:after {
+            width: 46px;
+        }
+    }
+    &+label {
+        background-color: #ddd;
+        border-radius: 20px;
+        &:after {
+            background-color: #fff;
+            border-radius: 10px;
+            width: 16px;
+            height: 16px;
+            top: 2px;
+            left: 2px;
+        }
     }
 }
