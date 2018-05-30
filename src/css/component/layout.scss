@@ -238,3 +238,12 @@
         color: rgb(58, 77, 187);
     }
 }
+
+.form__wrap{
+    .form__label {
+        width: auto;
+        &:after, &:before{
+            display:none;
+        }
+    }
+}
