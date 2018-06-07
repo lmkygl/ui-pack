@@ -240,10 +240,27 @@
 }
 
 .form__wrap{
+   // display: table;
+   p{
+       height: 30px;
+       line-height: 30px;
+   }
     .form__label {
+        margin: 0;
+        display: inline-block;
+        font-size: 14px;
+        color: #ccc;
         width: auto;
+        
         &:after, &:before{
             display:none;
         }
     }
+    input{
+        display: inline-block;
+    }
+}
+.select__box__wrap{
+    position: relative;
+    width: 200px;
 }
