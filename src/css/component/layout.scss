@@ -250,19 +250,29 @@
         display: inline-block;
         font-size: 14px;
         color: #ccc;
-        width: 30%;
+        width: 120px;
         text-indent: 20px;
         &:after, &:before{
             display:none;
         }
     }
     input[type="text"]{
-        width: 60%;
+        width: 200px;
+        height: 20px;
         display: inline-block;
         border:1px solid #eee;
     }
     #phone_num, #phone_num2, #phone_num3{
         width: 10%;
+    }
+    .ui_select_box{
+        position: relative;
+        
+        .select_btn{
+            border: 1px solid #eee;
+            background-color: #fff;
+
+        }
     }
 }
 .select__box__wrap{
