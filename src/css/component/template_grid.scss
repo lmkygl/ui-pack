@@ -1,0 +1,97 @@
+@import '../mixin/config.scss';
+@mixin grid-spacing($mt, $mr) {
+    .grid__row {
+        margin-top: - $mt;
+        margin-right: - $mr;
+        .grid__inner__item {
+            margin-top: $mt;
+            margin-right: $mr;
+        }
+    }
+}
+
+.grid {
+    $grid-spacing: 8px;
+    position: relative;
+    overflow: hidden;
+    .grid__row {
+        display: block;
+        clear: both;
+        content: '';
+    }
+    .grid__inner {
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; //position: relative;
+        .grid__inner__item {
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+    }
+    @include grid-spacing($grid-spacing, $grid-spacing); // 그리드 확장
+    &.nospacing {
+        @include grid-spacing(0, 0);
+    }
+    &.col-1 {
+        .grid__inner {
+            width: (100% /1);
+        }
+    }
+    &.col-2 {
+        .grid__inner {
+            width: (100% / 2);
+        }
+    }
+    &.col-3 {
+        .grid__inner {
+            width: (100% / 3);
+        }
+    }
+    &.col-4 {
+        .grid__inner {
+            width: (100% / 4);
+        }
+    }
+    &.col-5 {
+        .grid__inner {
+            width: (100% / 5);
+        }
+    }
+    &.col-6 {
+        .grid__inner {
+            width: (100% / 6);
+        }
+    }
+    &.col-7 {
+        .grid__inner {
+            width: (100% / 7);
+        }
+    }
+    &.col-8 {
+        .grid__inner {
+            width: (100% / 8);
+        }
+    }
+    .col-9 {
+        .grid__inner {
+            width: (100% / 9);
+        }
+    }
+    &.col-10 {
+        .grid__inner {
+            width: (100% / 10);
+        }
+    }
+    &.col-11 {
+        .grid__inner {
+            width: (100% / 11);
+        }
+    }
+    &.col-12 {
+        .grid__inner {
+            width: (100%/12);
+        }
+    } 
+}
