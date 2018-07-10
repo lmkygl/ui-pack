@@ -17,7 +17,7 @@
 <body>
     <div class="wrap">
         <div class="container">
-            <div class="border_bottom_line">
+            <!-- <div class="border_bottom_line">
                 <h3 class="ui__pack__title">- grid</h3>
                 <div class="grid col-8">
                     <ul class="grid__row">
@@ -116,7 +116,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
             <div class="border_bottom_line">
                 <h3 class="ui__pack__title">- navi underline</h3>
                 <div class="grid col-5">
@@ -773,14 +773,17 @@
                     </form>
                 </div>
             </div>
+
+            <div data-template="underline"></div>
         </div>
     </div>
     <script src="./js/client.js"></script>
     <script>
-        setTimeout(function() {
+
+        
             $.ajax({
                 method: 'GET',
-                url: './template/test.html'
+                url: './template/grid.html'
             })
             .done(function (res) {
                 // console.log(res);
@@ -788,7 +791,7 @@
                 $('.container').append(test);
                 
             });
-        }, 1000)
+
     </script>
 </body>
 

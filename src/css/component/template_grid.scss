@@ -1,9 +1,9 @@
 @import '../mixin/config.scss';
 @mixin grid-spacing($mt, $mr) {
-    .grid__row {
+    .grid_row {
         margin-top: - $mt;
         margin-right: - $mr;
-        .grid__inner__item {
+        .grid_inner_item {
             margin-top: $mt;
             margin-right: $mr;
         }
@@ -19,12 +19,12 @@
         clear: both;
         content: '';
     }
-    .grid__inner {
+    .grid_inner {
         float: left;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box; //position: relative;
-        .grid__inner__item {
+        .grid_inner_item {
             position: relative;
             overflow: hidden;
             text-align: center;
@@ -35,62 +35,62 @@
         @include grid-spacing(0, 0);
     }
     &.col-1 {
-        .grid__inner {
+        .grid_inner {
             width: (100% /1);
         }
     }
     &.col-2 {
-        .grid__inner {
+        .grid_inner {
             width: (100% / 2);
         }
     }
     &.col-3 {
-        .grid__inner {
+        .grid_inner {
             width: (100% / 3);
         }
     }
     &.col-4 {
-        .grid__inner {
+        .grid_inner {
             width: (100% / 4);
         }
     }
     &.col-5 {
-        .grid__inner {
+        .grid_inner {
             width: (100% / 5);
         }
     }
     &.col-6 {
-        .grid__inner {
+        .grid_inner {
             width: (100% / 6);
         }
     }
     &.col-7 {
-        .grid__inner {
+        .grid_inner {
             width: (100% / 7);
         }
     }
     &.col-8 {
-        .grid__inner {
+        .grid_inner {
             width: (100% / 8);
         }
     }
     .col-9 {
-        .grid__inner {
+        .grid_inner {
             width: (100% / 9);
         }
     }
     &.col-10 {
-        .grid__inner {
+        .grid_inner {
             width: (100% / 10);
         }
     }
     &.col-11 {
-        .grid__inner {
+        .grid_inner {
             width: (100% / 11);
         }
     }
     &.col-12 {
-        .grid__inner {
+        .grid_inner {
             width: (100%/12);
         }
     } 
