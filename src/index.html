@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/index.css">
-   <!-- <link rel="stylesheet" href="../node_modules/bxslider/src/css/jquery.bxslider.css">
+    <!-- <link rel="stylesheet" href="../node_modules/bxslider/src/css/jquery.bxslider.css">
     <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css" />
     <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.css" />-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -774,24 +774,30 @@
                 </div>
             </div>
 
+            <div data-template="grid"></div>
             <div data-template="underline"></div>
+            <div data-template="slide"></div>
         </div>
     </div>
     <script src="./js/client.js"></script>
     <script>
+        var template = $('[data-template]');
 
-        
-            $.ajax({
+        template.each(function() {
+            var id = template.attr('[data-template]');
+        });
+
+
+        $.ajax({
                 method: 'GET',
-                url: './template/grid.html'
+              //  url: './template/grid.html'
             })
             .done(function (res) {
                 // console.log(res);
                 var test = res;
                 $('.container').append(test);
-                
-            });
 
+            });
     </script>
 </body>
 
