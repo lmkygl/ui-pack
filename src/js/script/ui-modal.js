@@ -27,4 +27,13 @@
     $btn.on('click', modal_event);
     $close_btn.on('click', modal_close);
     $modal_wrap.on('click', modal_close);
+
+
+    // 비동기 init
+    $(document).ajaxComplete(function () {
+        $btn.on('click', modal_event);
+        $close_btn.on('click', modal_close);
+        $modal_wrap.on('click', modal_close);
+
+    });
 }());

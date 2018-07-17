@@ -52,6 +52,8 @@
     }
 
     $btn.on('click', slide_effect);
+    
+    // mobile swipe
     $slide_area.hammer().on('swipe', function (e) {
         var direction = e.gesture.offsetDirection;
         var $slider = $(e.currentTarget);
@@ -62,6 +64,7 @@
             $slider.find('.prve_btn').trigger('click');
         }
     });
+    
     function startInterval() {
         clearInterval(interval);
         interval = setInterval(function () {
@@ -83,4 +86,5 @@
             startInterval();
         }
     });
+
 }());
