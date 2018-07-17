@@ -1,6 +1,6 @@
 (function () {
     var $a_underline = $('[data-ui="navi_underline"]');
-    console.log($a_underline.length);
+   // console.log($a_underline.length);
 
     function navi_effect(e) {
         var $target = $(e.target);

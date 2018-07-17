@@ -777,20 +777,25 @@
             <div data-template="grid"></div>
             <div data-template="underline"></div>
             <div data-template="slide"></div>
+            <div data-template="tab"></div>
+            <div data-template="hamburger"></div>
+            <div data-template="checkbox"></div>
         </div>
     </div>
     <script src="./js/client.js"></script>
     <script>
         var template = $('[data-template]');
 
+            
         template.each(function() {
-            var id = template.attr('[data-template]');
-        });
+            var id = $(this).attr('data-template');
+            var fileName = id + '.html';
 
+            console.log(fileName);
 
-        $.ajax({
+            $.ajax({
                 method: 'GET',
-              //  url: './template/grid.html'
+                url: './template/'+ fileName ,
             })
             .done(function (res) {
                 // console.log(res);
@@ -798,6 +803,10 @@
                 $('.container').append(test);
 
             });
+        });
+
+
+        
     </script>
 </body>
 
