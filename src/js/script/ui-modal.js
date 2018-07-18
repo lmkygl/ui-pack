@@ -14,7 +14,7 @@
     }
 
     function modal_close(e) {
-        var target = $(e.target);
+        var $target = $(e.target);
         $modal_wrap.removeClass('open');
     }
 
