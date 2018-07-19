@@ -35,10 +35,10 @@
         var $btn = $page.find('button');
         var $modal_wrap = $('[data-ui="modal_wrap"]');
         var $close_btn = $modal_wrap.find('.trigger');
-
+       
         $btn.on('click', modal_event);
         $close_btn.on('click', modal_close);
-        $modal_wrap.on('click', modal_close);
+        $modal_wrap.on('click', modal_close2);
 
     });
 }());
