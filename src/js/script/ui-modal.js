@@ -15,11 +15,13 @@
 
     function modal_close(e) {
         var $target = $(e.target);
+        var $close_btn = $target.find('.fa-times');
+       
         $modal_wrap.removeClass('open');
     }
 
     function modal_close2(e) {
-        var target = $(e.target);
+        var $target = $(e.target);
         $(this).removeClass('open');
     }
 
