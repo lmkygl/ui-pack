@@ -15,8 +15,6 @@
 
     function modal_close(e) {
         var $target = $(e.target);
-        var $close_btn = $target.find('.fa-times');
-       
         $modal_wrap.removeClass('open');
     }
 
@@ -39,8 +37,8 @@
         var $close_btn = $modal_wrap.find('.trigger');
        
         $btn.on('click', modal_event);
-        $close_btn.on('click', modal_close);
-        $modal_wrap.on('click', modal_close2);
+        $close_btn.on('click', modal_close2);
+        $modal_wrap.on('click', modal_close);
 
     });
 }());
