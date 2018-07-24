@@ -88,5 +88,27 @@
     });
 
     
+    $(document).ajaxComplete(function () {
+
+        var $slide_area = $('[data-ui="slider__area"]');
+        var $btn = $slide_area.find('.btn');
+        var interval;
+    
+        $btn.on('click', slide_effect);
+        $(window).on('load blur focus', function (e) {
+            if (e.type === 'blur') {
+                clearInterval(interval);
+            } else {
+                startInterval();
+            }
+        });
+        $slide_area.on('mouseenter mouseleave', function (e) {
+            if (e.type === 'mouseenter') {
+                clearInterval(interval);
+            } else {
+                startInterval();
+            }
+        });
+    });
 
 }());
