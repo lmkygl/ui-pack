@@ -21,7 +21,7 @@
 
         var $basic_tab_con = $pannel_parent.find('[data-id="' + tab_id + '"]');
         var $fade_tab_con = $pannel2.find('[data-id="' + tab_id + '"]');
-       
+
         $pannel.hide();
         $basic_tab_con.show();
 
@@ -30,4 +30,15 @@
     }
 
     $btn.on('click', tab_effect);
+
+
+    $(document).ajaxComplete(function () {
+
+        var $tab_btn_area = $('[data-ui="tab__btn__area"]');
+        var $btn = $tab_btn_area.find('button');
+
+        $btn.on('click', tab_effect);
+        // fade effect bug
+
+    });
 }());
