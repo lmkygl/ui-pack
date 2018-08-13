@@ -17,16 +17,19 @@
         }
     }
 
+    // 동기
+    // if ($a_underline.length) {
+    //     $a_underline.on('mouseenter mouseleave', navi_effect);
+    // }
 
-    // 동적 init
-    if ($a_underline.length) {
-        $a_underline.on('mouseenter mouseleave', navi_effect);
-    }
 
-    // 비동기 init
-    $(document).ajaxComplete(function(){
-        if ($('[data-ui="navi_underline"]').length) {
-            $('[data-ui="navi_underline"]').on('mouseenter mouseleave', navi_effect);
-        }
-    });
+    // // 비동기 init
+    // $(document).ajaxComplete(function(){
+    //     if ($('[data-ui="navi_underline"]').length) {
+    //         $('[data-ui="navi_underline"]').on('mouseenter mouseleave', navi_effect);
+    //     }
+    // });
+
+    // both
+    $(document).on('mouseenter mouseleave', '[data-ui="navi_underline"]', navi_effect);
 }());
