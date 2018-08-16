@@ -10,6 +10,7 @@
     }
 }
 
+
 .grid {
     $grid-spacing: 8px;
     position: relative;
@@ -94,4 +95,10 @@
             width: (100%/12);
         }
     } 
+}
+
+.grid{
+    &.grid__inner{
+        color: #fff;
+    }
 }
