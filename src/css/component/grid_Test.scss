@@ -1,12 +1,14 @@
 @import '../mixin/config.scss';
-@mixin grid-spacing($mt, $mr) {
+@mixin grid-spacing($mt, $mr, $mb) {
     .grid_row {
         margin-top: - $mt;
         margin-right: - $mr;
+        margin-bottom: -$mb;
     }
     .grid_inner_item {
         margin-top: $mt;
         margin-right: $mr;
+        margin-bottom: $mb;
     }
 }
 
@@ -31,9 +33,9 @@
         overflow: hidden;
         text-align: center;
     }
-    @include grid-spacing($grid-spacing, $grid-spacing); // 그리드 확장
+    @include grid-spacing($grid-spacing, $grid-spacing, $grid-spacing); // 그리드 확장
     &.nospacing {
-        @include grid-spacing(0, 0);
+        @include grid-spacing(0, 0, 0);
     }
     &.col-1 {
         .grid_inner {
