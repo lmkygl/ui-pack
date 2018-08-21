@@ -3,18 +3,19 @@
     .grid_row {
         margin-top: - $mt;
         margin-right: - $mr;
-        .grid_inner_item {
-            margin-top: $mt;
-            margin-right: $mr;
-        }
+    }
+    .grid_inner_item {
+        margin-top: $mt;
+        margin-right: $mr;
     }
 }
+
 
 .grid {
     $grid-spacing: 8px;
     position: relative;
     overflow: hidden;
-    .grid__row {
+    .grid_row {
         display: block;
         clear: both;
         content: '';
@@ -23,12 +24,12 @@
         float: left;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
-        box-sizing: border-box; //position: relative;
-        .grid_inner_item {
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
+        box-sizing: border-box;
+    }
+    .grid_inner_item {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
     }
     @include grid-spacing($grid-spacing, $grid-spacing); // 그리드 확장
     &.nospacing {
@@ -70,11 +71,11 @@
         }
     }
     &.col-8 {
-        .grid_inner {
+       .grid_inner {
             width: (100% / 8);
         }
     }
-    .col-9 {
+    &.col-9 {
         .grid_inner {
             width: (100% / 9);
         }
