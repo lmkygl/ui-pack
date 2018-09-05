@@ -157,31 +157,21 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(41, 171, 164, 0.8);
+    background-color: rgba(100,100,100,0.8);
     visibility: hidden;
     opacity: 0;
     transition: all 0.25s ease-in-out;
     z-index: 1;
-    &.open .modal__container {
-        margin-top: -200px;
+    &.open{
         opacity: 1;
-    }
-    &.modal__w2 {
-        background-color: rgba(75, 158, 158, 0.8);
-        &.open .modal__container {
+        visibility: visible;
+        .modal__container {
             margin-top: -200px;
             opacity: 1;
         }
     }
-    &.modal__w3 {
-        background-color: rgba(79, 67, 121, 0.8);
-    }
 }
 
-.modal__wrap.open {
-    opacity: 1;
-    visibility: visible;
-}
 
 .modal__container {
     width: 600px;
@@ -216,6 +206,7 @@
     float: right;
     color: #fff;
     cursor: pointer;
+    background-color:#000;
 }
 
 .modal__content {
