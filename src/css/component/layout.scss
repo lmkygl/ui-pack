@@ -82,6 +82,13 @@
     margin-top: 20px;
 }
 
+.pannel_area{
+    transition: all .3s;
+    .tab_pannel{
+        display:none;
+    }
+}
+
 .basic__pannel__area {
     .pannel_con {
         display: none;
@@ -89,7 +96,7 @@
             display: block;
         }
     }
-}
+} 
 
 .fade__tab__pannel__area {
     position: relative;
@@ -129,6 +136,7 @@
         }
     }
 }
+
 
 .page__wrap {
     position: relative;

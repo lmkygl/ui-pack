@@ -1,44 +1,33 @@
 // tab 제작
 (function () {
-    var $tab_btn_area = $('[data-ui="tab__btn__area"]');
-    var $btn = $tab_btn_area.find('button');
-
-    function tab_effect(e) {
-        var $target = $(e.currentTarget);
-        var $parent = $target.parent();
-        var $button = $parent.find('button');
-        var $pannel_parent = $parent.siblings('.basic__pannel__area');
-        var $pannel = $pannel_parent.find('.pannel_con');
-        var $pannel_parent2 = $parent.parent();
-        var $pannel2 = $pannel_parent2.find('.tab_pannel_content');
-        var $pannel2_1 = $pannel_parent2.find('.tab_pannel_content').children();
+    function tab_button_effect(e) {
+        var $target = $(e.target);
         var tab_id;
+        var tab_option;
+        var $pannel = $('[data-ui="pannel_area"]');
 
-        $button.removeClass('active');
-        $target.addClass('active');
 
         tab_id = $target.attr('data-id');
+        tab_option = $target.attr('data-option');
 
-        var $basic_tab_con = $pannel_parent.find('[data-id="' + tab_id + '"]');
-        var $fade_tab_con = $pannel2.find('[data-id="' + tab_id + '"]');
+        var $pannel_content = $pannel.children('[data-id="' + tab_id + '"]');
+     //   var $pannel_option_content = $pannel.children('[data-option="' + tab_option + '"]');
 
-        $pannel.hide();
-        $basic_tab_con.show();
+       // var $tab_pannel = $('.tab_pannel');
+        //console.log($pannel_option_content);
 
-        $pannel2_1.fadeOut();
-        $fade_tab_con.fadeIn();
+        $('.tab_pannel').hide();
+        $pannel_content.show();
+    //    $pannel_option_content.fadeIn();
+        if( tab_id >= 4){
+            $pannel_content.fadeIn();
+        }
+
     }
-
-    $btn.on('click', tab_effect);
-
-
     $(document).ajaxComplete(function () {
+        var $button_area = $('[data-ui="tab_button_area"]');
+        var $button = $button_area.find('button');
 
-        var $tab_btn_area = $('[data-ui="tab__btn__area"]');
-        var $btn = $tab_btn_area.find('button');
-
-        $btn.on('click', tab_effect);
-        // fade effect bug
-
+        $button.on('click', tab_button_effect);
     });
 }());

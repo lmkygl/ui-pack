@@ -2,7 +2,7 @@
 (function () {
     var $btn_wrap = $('[data-ui="hamburger_wrap"]');
     var $btn = $btn_wrap.find('.hamburger');
-
+    
     function hamburger_motion(e) {
         var $target = $(e.target);
         var $line_first = $target.find('span:nth-child(1)');

@@ -781,6 +781,7 @@
             <div data-template="hamburger"></div>
             <div data-template="checkbox"></div>
             <div data-template="modal"></div>
+
         </div>
     </div>
     <script src="./js/client.js"></script>
@@ -799,9 +800,9 @@
                 url: './template/'+ fileName ,
             })
             .done(function (res) {
-                // console.log(res);
-                var test = res;
-                $('.container').append(test);
+               //  console.log(res);
+                 var test = res;
+                 $('.container').append(test);
 
             });
         });
