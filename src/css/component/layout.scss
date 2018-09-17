@@ -83,10 +83,13 @@
 }
 
 .pannel_area{
-    transition: all .3s;
     .tab_pannel{
         display:none;
+        &.active{
+            display:block;
+        }
     }
+    
 }
 
 .basic__pannel__area {
