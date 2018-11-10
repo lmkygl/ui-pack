@@ -2,14 +2,42 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 .hljs {
     display: block;
-    overflow-x: auto;
     padding: 0.5em;
-   // color: #333;
-    background: #f8f8f8;
+    background: #f8f8f8 !important;
+    white-space: pre;
+    overflow-x: auto;
 }
 code {
     font-size: 12px;
     line-height: 1.4em;
+}
+.source_code{
+    padding-top: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    display:none;
+}
+.rules_button_area{
+    text-align: right;
+    padding:20px 0;
+    button{
+        background: #fff;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        box-shadow: 0 1px 3px 0 hsla(0,0%,86.3%,.3);
+        box-sizing: border-box;
+        color: #333;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 400;
+        line-height: 1.5;
+        margin: 0;
+        text-align: center;
+        text-decoration: none;
+        transition: border-color .2s cubic-bezier(.075,.82,.165,1);
+        vertical-align: middle;
+        padding:5px;
+    }
 }
 body,
 html {

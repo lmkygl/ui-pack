@@ -12,7 +12,7 @@
     }
 
     function modal_close(e) {
-        var $target = $(e.currentTarget);
+        var $target = $(e.target);
         $target.removeClass('open');
     }
 

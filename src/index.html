@@ -38,8 +38,6 @@
     <script src="./js/client.js"></script>
     <script>
         var template = $('[data-template]');
-
-
         template.each(function () {
             var id = $(this).attr('data-template');
             var fileName = id + '.html';
@@ -54,7 +52,6 @@
                     //  console.log(res);
                     var test = res;
                     $('.container').append(test);
-
                 });
         });
         $(document).ready(function () {
