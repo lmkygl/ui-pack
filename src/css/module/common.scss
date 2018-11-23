@@ -3,7 +3,7 @@
 .hljs {
     display: block;
     padding: 0.5em;
-    background: #f8f8f8 !important;
+    //background: #f8f8f8 !important;
     white-space: pre;
     overflow-x: auto;
 }
@@ -38,6 +38,10 @@ code {
         vertical-align: middle;
         padding:5px;
     }
+}
+.border_line {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
 }
 body,
 html {
