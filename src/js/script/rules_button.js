@@ -7,8 +7,9 @@
     function rules_event(e) {
         var $target = $(e.target);
         var toggled = $target.data('toggle');
-        var $rules_area = $('.source_code');
+        var $rules_area = $target.parent('[data-ui="rules_area"]').find('.source_code');
 
+        console.log($rules_area);
         if (!animating) {
             animating = true;
 
@@ -24,7 +25,7 @@
                     animating = false;
                 });
                 $target.text("RULES");
-            }
+            }   
         }
     }
     $btn.on('click', rules_event);
