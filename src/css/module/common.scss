@@ -1,5 +1,6 @@
 @import '../mixin/config.scss';
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 .hljs {
     display: block;
     padding: 0.5em;
@@ -7,24 +8,28 @@
     white-space: pre;
     overflow-x: auto;
 }
+
 code {
     font-size: 12px;
     line-height: 1.4em;
 }
-.source_code{
+
+.source_code {
     padding-top: 30px;
     font-size: 14px;
     font-weight: 300;
-    display:none;
+    display: none;
 }
-.rules_button_area{
+
+.rules_button_area {
     text-align: right;
-    padding:20px 0;
-    button{
+    padding: 20px 0;
+
+    button {
         background: #fff;
         border: 1px solid #d9d9d9;
         border-radius: 2px;
-        box-shadow: 0 1px 3px 0 hsla(0,0%,86.3%,.3);
+        box-shadow: 0 1px 3px 0 hsla(0, 0%, 86.3%, .3);
         box-sizing: border-box;
         color: #333;
         cursor: pointer;
@@ -34,16 +39,25 @@ code {
         margin: 0;
         text-align: center;
         text-decoration: none;
-        transition: border-color .2s cubic-bezier(.075,.82,.165,1);
+        transition: border-color .2s cubic-bezier(.075, .82, .165, 1);
         vertical-align: middle;
-        padding:5px;
+        padding: 5px;
+       
+        &.rules_tab_btn{
+            max-width: 47px;
+            width: 100%;
+        }
     }
+
+        
 }
+
 .border_line {
     border-bottom: 2px solid #eee;
     padding: 10px;
-   
+
 }
+
 body,
 html {
     height: 100%;
@@ -58,9 +72,11 @@ a {
 .full__width {
     width: 100%;
 }
+
 .ui__pack__title {
     font-size: 30px;
-    margin: 30px 0;
+    margin-top: 30px;
+    margin-bottom: 5px;
 }
 
 .ui__pack__sub__title {
@@ -77,6 +93,7 @@ a {
         width: 100%;
         overflow-x: hidden;
     }
+
     @include mobile {
         width: 100%;
         overflow-x: hidden;
@@ -97,44 +114,54 @@ a {
 .slider__visual__area {
     position: relative;
     overflow: hidden;
+
     .slider_visual_wrap {
         overflow: hidden;
         width: 100%;
         height: 200px;
         position: relative;
         clear: both;
+
         .slider {
             width: 400%;
             height: 100%;
+
             li {
                 text-align: center;
                 width: 25%;
                 height: 200px;
                 float: left;
             }
+
             .con1 {
                 background-color: $box-bg;
             }
+
             .con2 {
                 background-color: $box-bg;
             }
+
             .con3 {
                 background-color: $box-bg;
             }
+
             .con4 {
                 background-color: $box-bg;
             }
+
             .con5 {
                 background-color: $box-bg;
             }
         }
     }
+
     .prve_btn {
         cursor: pointer;
         position: absolute;
         left: 5%;
         top: 40%;
     }
+
     .next_btn {
         cursor: pointer;
         position: absolute;
@@ -153,6 +180,7 @@ button {
     border: none;
     text-align: center;
     cursor: pointer;
+
     &.active {
         background-color: #000;
         color: #fff;
@@ -174,14 +202,26 @@ button {
 
 // 
 
-input:-ms-input-placeholder { color: #ccc; }
+input:-ms-input-placeholder {
+    color: #ccc;
+}
+
 // Internet Explorer 10 이상에 적용
 
-input::-webkit-input-placeholder { color: #ccc; } 
+input::-webkit-input-placeholder {
+    color: #ccc;
+}
+
 //  Webkit, Blink, Edge에 적용
 
-input::-moz-placeholder { color: #ccc; }
+input::-moz-placeholder {
+    color: #ccc;
+}
+
 // Mozilla Firefox 4 부터 18에 적용
 
-input::-moz-placeholder { color: #ccc; }
+input::-moz-placeholder {
+    color: #ccc;
+}
+
 // Mozilla Firefox 19 이상에 적용
