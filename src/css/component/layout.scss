@@ -85,6 +85,8 @@
 .pannel_area{
     .tab_pannel{
         display:none;
+        font-size: 14px;
+        line-height: 22px;
         &.active{
             display:block;
         }
