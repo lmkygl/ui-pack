@@ -98,4 +98,12 @@
             width: (100%/12);
         }
     } 
+    @include mobile {
+        width: 100%;
+        overflow-x: hidden;
+        .grid_inner {
+            width: 100% !important;
+        }
+    }
 }
+
