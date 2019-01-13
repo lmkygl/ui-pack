@@ -17,6 +17,30 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.7/styles/tomorrow-night-blue.min.css">
     <script src="//cdn.jsdelivr.net/highlight.js/8.7/highlight.min.js"></script>
     <script>
+        function setCookie(name, value, expiredays) {
+            var todayDate = new Date();
+            todayDate.setDate(todayDate.getDate() + expiredays);
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+        }
+
+        function closeWin(div, chk, cookname) {
+            if (document.getElementById(chk).checked) {
+                setCookie(cookname, "done", 1);
+            }
+            document.getElementById(div).style.visibility = "hidden";
+        }
+        window.onload = function () {
+            cookiedata = document.cookie;
+            /* popup1 */
+            if (cookiedata.indexOf("maindiv=done") < 0) {
+                document.getElementById('divpop').style.visibility = "visible";
+            } else {
+                document.getElementById('divpop').style.visibility = "hidden";
+            }
+        }
+    </script>
+
+    <script>
         hljs.initHighlightingOnLoad();
     </script>
     <title>ui-pack</title>
@@ -25,6 +49,25 @@
 <body>
     <div class="wrap">
         <div class="container">
+            <div id="divpop" style="position:fixed;left:100px;top:139px;z-index:4000;visibility:hidden;">
+                <div style="height:500px; position: relative;">
+                    <img src="images/pop1.png" style="width:400px; height:500px">
+                    <span class="p1"><a href="http://shimsps.co.kr/pop1.php#con1" target="_blank"></a></span>
+                    <span class="p2"><a href="http://shimsps.co.kr/pop1.php#con1" target="_blank"></a></span>
+                    <span class="p3"><a href="http://shimsps.co.kr/pop1.php#con2" target="_blank"></a></span>
+                    <span class="p4"><a href="http://shimsps.co.kr/pop1.php#con3" target="_blank"></a></span>
+                    <span class="p5"><a href="http://shimsps.co.kr/pop1.php#con3" target="_blank"></a></span>
+                </div>
+                <table width="400" cellpadding="2" cellspacing="0">
+                    <tr>
+                        <td align="center" style="color:#000; font-size:11px; padding:5px 0; vertical-align: middle; background:#fff; border:1px solid #ccc; ">
+                            <input type="checkbox" id="chkbox" value="checkbox" style="vertical-align:middle; margin-right:5px; display:inline-block;">오늘
+                            하루 이 창을 열지 않음
+                            <a style="color:#000; margin-left: 5px;" href="javascript:closeWin('divpop', 'chkbox', 'maindiv');"><B>[닫기]</B></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div data-template="grid"></div>
             <div data-template="underline"></div>
             <div data-template="slide"></div>
