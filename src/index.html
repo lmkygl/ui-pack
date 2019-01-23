@@ -31,7 +31,6 @@
         }
         window.onload = function () {
             cookiedata = document.cookie;
-            /* popup1 */
             if (cookiedata.indexOf("maindiv=done") < 0) {
                 document.getElementById('divpop').style.visibility = "visible";
             } else {
@@ -51,12 +50,7 @@
         <div class="container">
             <div id="divpop" style="position:fixed;left:100px;top:139px;z-index:4000;visibility:hidden;">
                 <div style="height:500px; position: relative;">
-                    <img src="images/pop1.png" style="width:400px; height:500px">
-                    <span class="p1"><a href="http://shimsps.co.kr/pop1.php#con1" target="_blank"></a></span>
-                    <span class="p2"><a href="http://shimsps.co.kr/pop1.php#con1" target="_blank"></a></span>
-                    <span class="p3"><a href="http://shimsps.co.kr/pop1.php#con2" target="_blank"></a></span>
-                    <span class="p4"><a href="http://shimsps.co.kr/pop1.php#con3" target="_blank"></a></span>
-                    <span class="p5"><a href="http://shimsps.co.kr/pop1.php#con3" target="_blank"></a></span>
+                    popup
                 </div>
                 <table width="400" cellpadding="2" cellspacing="0">
                     <tr>
@@ -93,7 +87,7 @@
                     url: './template/' + fileName,
                 })
                 .done(function (res) {
-                    //  console.log(res);
+                    //console.log(res);
                     var test = res;
                     $('.container').append(test);
                 });
