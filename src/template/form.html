@@ -4,123 +4,103 @@
     <button data-ui="rules_btn" data-toggle="false">RULES</button>
     <div class="source_code">
     </div>
-    <div class="grid col-4">
+    <div class="grid col-1">
         <ul class="grid_row">
             <li class="grid_inner">
                 <div class="grid_inner_item">
-                    <p class="grid_content">item</p>
-                </div>
-            </li>
-            <li class="grid_inner">
-                <div class="grid_inner_item">
-                    <p class="grid_content">item</p>
-                </div>
-            </li>
-            <li class="grid_inner">
-                <div class="grid_inner_item">
-                    <p class="grid_content">item</p>
-                </div>
-            </li>
-            <li class="grid_inner">
-                <div class="grid_inner_item">
-                    <p class="grid_content">item</p>
+                    <form name="singup" method="post" onsubmit="return checkform()" action="login.php">
+                        <table>
+                            <caption>회원 기본 정보 등록</caption>
+                            <tbody>
+                                <tr>
+                                    <th>아이디 :</th>
+                                    <td><input type="text" name="userID" id="userID" maxleght="12" placeholder="4~12자의 영문 대소문자와 숫자로만 입력" /></td>
+                                </tr>
+                                <tr>
+                                    <th>비밀번호 :</th>
+                                    <td><input type="password" name="userPW" id="userPW" maxleght="12" placeholder="4~12자의 영문 대소문자와 숫자로만 입력" /></td>
+                                </tr>
+                                <tr>
+                                    <th>비밀번호 확인 :</th>
+                                    <td><input type="password" name="userPW1" id="userPW1" maxleght="12" /></td>
+                                </tr>
+                                <tr>
+                                    <th>이메일 :</th>
+                                    <td><input type="text" name="userEmail" id="userEmail" /></td>
+                                </tr>
+                                <tr>
+                                    <th>이름 :</th>
+                                    <td><input type="text" name="userName" id="userName" maxlenght="7" /></td>
+                                </tr>
+                                <tr>
+                                    <th>생년월일 :</th>
+                                    <td>
+                                        <input type="text" name="userYear" id="userYear" maxlength="4"/>년
+                                        <select name="userMoth">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>월
+                                        <select name="userDate" id="userDate">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>일
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>관심 분야 :</th>
+                                    <td>
+                                        <input type="checkbox" name="userHobby" id="userHobby"><label for="userHobby">컴퓨터</label>
+                                        <input type="checkbox" name="userHobby" id="userHobby1"><label for="userHobby1">영화</label>
+                                        <input type="checkbox" name="userHobby" id="userHobby2"><label for="userHobby2">그림</label>
+                                        <input type="checkbox" name="userHobby" id="userHobby3"><label for="userHobby3">음악</label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input type="submit" value="회원가입" onclick="sendit()"> <input type="reset" value="다시 입력">
+                    </form>
                 </div>
             </li>
         </ul>
     </div>
 
-    <form name="f" method="post" onsubmit="return sendIt();" action="mailto:rmlfa96@naver.com">
-        <table width="800" height="250" border="1" align="center">
-            <tr align="left">
-                <td align="center" colspan="2" bgcolor="pink"><B>회원 기본 정보</B></td>
-            </tr>
-            <tr align="left">
-                <td align="center" bgcolor="lightgreen"><b>아이디:</b></td>
-                <td><input type="text" name="my_id" id="my_id" size="20" maxlength="12">4~12자의 영문 대소문자와 숫자로만 입력</td>
-            </tr>
-            <tr align="left">
-                <td align="center" bgcolor="lightgreen"><b>비밀번호:</b></td>
-                <td><input type="password" name="my_pwd" id="my_pwd" size="20" maxlength="12">4~12자의 영문 대소문자와 숫자로만 입력</td>
-            </tr>
-            <tr align="left">
-                <td align="center" bgcolor="lightgreen"><b>비밀번호 확인:</b></td>
-                <td><input type="password" name="my_pwd1" size="20" maxlength="12"></td>
-            </tr>
-            <tr align="left">
-                <td align="center" bgcolor="lightgreen"><b>메일 주소:</b></td>
-                <td><input type="text" name="my_add" id="my_add" size="20">예>id@domain.com</td>
-            </tr>
-            <tr align="left">
-                <td align="center" bgcolor="lightgreen"><b>이름:</b></td>
-                <td><input type="text" name="my_name" id="my_name" size="20" maxlength="7"></td>
-            </tr>
-            <tr>
-                <td align="center" colspan="2" bgcolor="skyblue"><B>개인 신상정보</B></td>
-            </tr>
-            <tr align="left">
-                <td align="center" bgcolor="lightgreen"><b>주민등록번호:</b></td>
-                <td><input type="text" name="my_num" size="20" maxlength="13">예)1234561234567</td>
-            </tr>
-            <tr align="left">
-                <td align="center" bgcolor="lightgreen"><b>생일:</b></td>
-                <td><input type="text" name="my_year" size="4" maxlength="4">년<select name="my_month" id="my_month">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select>월<select name="my_date" id="my_date">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                        <option value="31">31</option>
-                    </select>일</td>
-            </tr>
-            <tr align="left">
-                <td align="center" bgcolor="lightgreen"><b>관심분야:</b></td>
-                <td><input type="checkbox" name="hobby">컴퓨터 <input type="checkbox" name="hobby">인터넷 <input type="checkbox"
-                        name="hobby">여행 <input type="checkbox" name="hobby">영화감상
-                    <input type="checkbox" name="hobby">음악감상</td>
-            </tr>
-            <tr align="left">
-                <td align="center" bgcolor="lightgreen"><b>자기소개:</b></td>
-                <td><textarea name="my_intro" id="my_intro" cols="80" rows="5"></textarea></td>
-            </tr>
-        </table>
-        <br> <br> <input type="submit" value="회원가입" onclick="sendit()"> <input type="reset" value="다시 입력">
-    </form>
 </div>
