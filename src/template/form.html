@@ -9,8 +9,12 @@
             <li class="grid_inner">
                 <div class="grid_inner_item">
                     <form name="singup" method="post" onsubmit="return checkform()" action="login.php">
-                        <table>
+                        <table class="form_tables">
                             <caption>회원 기본 정보 등록</caption>
+                            <colgroup>
+                                <col width="20%" />
+                                <col width="*" />
+                            </colgroup>
                             <tbody>
                                 <tr>
                                     <th>아이디 :</th>
@@ -35,7 +39,8 @@
                                 <tr>
                                     <th>생년월일 :</th>
                                     <td>
-                                        <input type="text" name="userYear" id="userYear" maxlength="4"/>년
+                                        <input type="text" name="userYear" id="userYear" maxlength="4" /> 년
+                                        
                                         <select name="userMoth">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -49,7 +54,7 @@
                                             <option value="10">10</option>
                                             <option value="11">11</option>
                                             <option value="12">12</option>
-                                        </select>월
+                                        </select> 월
                                         <select name="userDate" id="userDate">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -96,7 +101,9 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <input type="submit" value="회원가입" onclick="sendit()"> <input type="reset" value="다시 입력">
+                        <div class="form_btn">
+                            <input type="submit" value="회원가입" onclick="sendit()"> <input type="reset" value="다시 입력">
+                        </div>
                     </form>
                 </div>
             </li>

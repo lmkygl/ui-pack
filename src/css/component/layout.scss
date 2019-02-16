@@ -1,4 +1,5 @@
 @import '../mixin/config.scss';
+
 .grid_content {
     color: $font-color;
     background-color: #efefef;
@@ -22,29 +23,36 @@
 .slide_wrap {
     margin-top: 40px;
     overflow: hidden;
+
     .bx-wrapper {
         border: none;
         box-shadow: none;
     }
+
     .box {
         height: 400px;
+
         .box_bg0 {
             height: 100%;
-            background-color:$box-bg;
+            background-color: $box-bg;
         }
+
         .box_bg1 {
             height: 100%;
-            background-color:$box-bg;
+            background-color: $box-bg;
         }
+
         .box_bg2 {
             height: 100%;
             background-color: $box-bg;
         }
+
         .box_bg3 {
             height: 100%;
             background-color: $box-bg;
         }
     }
+
     .bx-controls-direction {
         display: none;
     }
@@ -53,24 +61,30 @@
 .owl_slide_wrap {
     margin-top: 40px; //   height: 500px;
     overflow: hidden; //background-color:#ccc;
+
     .owl-carousel .owl-nav.disabled {
         display: block;
     }
+
     .box {
         // 요소에는 높이값을 주되, owl을 사용할 영역은 높이값을 주지 않아도된다.
         overflow: hidden;
+
         .box_bg0 {
             height: 200px;
             background-color: $box-bg;
         }
+
         .box_bg1 {
             height: 200px;
             background-color: $box-bg;
         }
+
         .box_bg2 {
             height: 200px;
             background-color: $box-bg;
         }
+
         .box_bg3 {
             height: 200px;
             background-color: $box-bg;
@@ -82,33 +96,37 @@
     margin-top: 20px;
 }
 
-.pannel_area{
-    .tab_pannel{
-        display:none;
-        &.active{
-            display:block;
+.pannel_area {
+    .tab_pannel {
+        display: none;
+
+        &.active {
+            display: block;
         }
     }
-    
+
 }
 
 .basic__pannel__area {
     .pannel_con {
         display: none;
+
         &._active {
             display: block;
         }
     }
-} 
+}
 
 .fade__tab__pannel__area {
     position: relative;
     min-height: 300px;
+
     .pannel_con {
         position: absolute;
         left: 0;
         top: 0;
         display: none;
+
         &._active {
             display: block;
         }
@@ -118,6 +136,7 @@
 .img__box__area {
     position: relative;
     min-height: 300px;
+
     .img_box {
         position: absolute;
         right: 0;
@@ -125,15 +144,19 @@
         width: 90%;
         height: 100%;
         display: none;
+
         &._active {
             display: block;
         }
+
         &.box0 {
             background-color: $box-bg;
         }
+
         &.box1 {
             background-color: $box-bg;
         }
+
         &.box2 {
             background-color: $box-bg;
         }
@@ -143,6 +166,7 @@
 
 .page__wrap {
     position: relative;
+
     button {
         width: 200px;
         padding: 18px 0;
@@ -154,9 +178,11 @@
         border-radius: 0;
         background-color: $box-bg;
     }
+
     .btn2 {
         background-color: $box-bg;
     }
+
     .btn3 {
         background-color: $box-bg;
     }
@@ -168,14 +194,16 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(100,100,100,0.8);
+    background-color: rgba(100, 100, 100, 0.8);
     visibility: hidden;
     opacity: 0;
     transition: all 0.25s ease-in-out;
     z-index: 1;
-    &.open{
+
+    &.open {
         opacity: 1;
         visibility: visible;
+
         .modal__container {
             margin-top: -200px;
             opacity: 1;
@@ -203,9 +231,11 @@
     padding: 12px 30px;
     overflow: hidden;
     background-color: #e2525c;
+
     &.head2 {
         background-color: rgb(63, 87, 28);
     }
+
     &.head3 {
         background-color: rgb(58, 77, 187);
     }
@@ -217,7 +247,7 @@
     float: right;
     color: #fff;
     cursor: pointer;
-    background-color:#000;
+    background-color: #000;
 }
 
 .modal__content {
@@ -227,26 +257,32 @@
 .good_job {
     text-align: center;
     color: #e2525c;
+
     h1 {
         font-size: 45px;
     }
+
     .fa-thumbs-o-up {
         font-size: 60px;
     }
+
     &.job2 {
         color: rgb(63, 87, 28);
     }
+
     &.job3 {
         color: rgb(58, 77, 187);
     }
 }
 
-.form__wrap{
-   //background-color: #f1f1f1;
-   p{
-       height: 30px;
-       line-height: 30px;
-   }
+.form__wrap {
+
+    //background-color: #f1f1f1;
+    p {
+        height: 30px;
+        line-height: 30px;
+    }
+
     .form__label {
         margin: 0;
         display: inline-block;
@@ -254,30 +290,72 @@
         color: #ccc;
         width: 120px;
         text-indent: 20px;
-        &:after, &:before{
-            display:none;
+
+        &:after,
+        &:before {
+            display: none;
         }
     }
-    input[type="text"]{
+
+    input[type="text"] {
         width: 200px;
         height: 20px;
         display: inline-block;
-        border:1px solid #eee;
+        border: 1px solid #eee;
     }
-    #phone_num, #phone_num2, #phone_num3{
+
+    #phone_num,
+    #phone_num2,
+    #phone_num3 {
         width: 10%;
     }
-    .ui_select_box{
+
+    .ui_select_box {
         position: relative;
-        
-        .select_btn{
+
+        .select_btn {
             border: 1px solid #eee;
             background-color: #fff;
 
         }
     }
 }
-.select__box__wrap{
+
+.select__box__wrap {
     position: relative;
     width: 200px;
+}
+
+// form 유효성 검사 
+.form_tables {
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    caption{
+        font-size: 20px;
+        text-align: left;
+        font-weight: 600;
+        padding: 10px 0;
+    }
+    tr{
+        th, td{
+            padding: 20px;
+        }     
+    }
+    input[type="checkbox"]{
+        display:inline-block;
+    }
+    input[type="text"], input[type="password"]{
+        width: 200px;
+        height: 20px;
+        text-indent: 5px;
+    }
+    input[name="userYear"]{
+        width: 70px;
+    }
+    
+    
+}
+.form_btn{
+    text-align: left;
 }
