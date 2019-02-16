@@ -16,7 +16,7 @@
     <script src="./js/vendor.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.7/styles/tomorrow-night-blue.min.css">
     <script src="//cdn.jsdelivr.net/highlight.js/8.7/highlight.min.js"></script>
-    <script>
+    <!-- <script>
         function setCookie(name, value, expiredays) {
             var todayDate = new Date();
             todayDate.setDate(todayDate.getDate() + expiredays);
@@ -37,31 +37,17 @@
                 document.getElementById('divpop').style.visibility = "hidden";
             }
         }
-    </script>
+    </script> -->
 
-    <script>
+    <!-- <script>
         hljs.initHighlightingOnLoad();
-    </script>
+    </script> -->
     <title>ui-pack</title>
 </head>
 
 <body>
     <div class="wrap">
         <div class="container">
-            <!-- <div id="divpop" style="position:fixed;left:100px;top:139px;z-index:4000;visibility:hidden;">
-                <div style="height:500px; position: relative;">
-                    popup
-                </div>
-                <table width="400" cellpadding="2" cellspacing="0">
-                    <tr>
-                        <td align="center" style="color:#000; font-size:11px; padding:5px 0; vertical-align: middle; background:#fff; border:1px solid #ccc; ">
-                            <input type="checkbox" id="chkbox" value="checkbox" style="vertical-align:middle; margin-right:5px; display:inline-block;">오늘
-                            하루 이 창을 열지 않음
-                            <a style="color:#000; margin-left: 5px;" href="javascript:closeWin('divpop', 'chkbox', 'maindiv');"><B>[닫기]</B></a>
-                        </td>
-                    </tr>
-                </table>
-            </div> -->
             <div data-template="popup"></div>
             <div data-template="grid"></div>
             <div data-template="underline"></div>
@@ -69,8 +55,8 @@
             <div data-template="tab"></div>
             <div data-template="hamburger"></div>
             <div data-template="checkbox"></div>
-            <div data-template="modal"></div>
-
+            <!-- <div data-template="modal"></div> -->
+            <div data-template="form"></div>
         </div>
 
     </div>
@@ -80,7 +66,6 @@
         template.each(function () {
             var id = $(this).attr('data-template');
             var fileName = id + '.html';
-
             // console.log(fileName);
 
             $.ajax({
@@ -88,16 +73,16 @@
                     url: './template/' + fileName,
                 })
                 .done(function (res) {
-                    //console.log(res);
+                    console.log(res);
                     var test = res;
                     $('.container').append(test);
                 });
         });
-        $(document).ready(function () {
-            $('pre code').each(function (i, block) {
-                hljs.highlightBlock(block);
-            });
-        });
+        // $(document).ready(function () {
+        //     $('pre code').each(function (i, block) {
+        //         hljs.highlightBlock(block);
+        //     });
+        // });
     </script>
 </body>
 

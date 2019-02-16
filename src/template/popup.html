@@ -1,16 +1,70 @@
 <div class="">
-        <h3 class="ui__pack__title border_line">- popup</h3>
-        <div class="rules_button_area" data-ui="rules_area">
-            <button data-ui="rules_btn" data-toggle="false">RULES</button>
-            <div class="source_code"></div>
+    <h3 class="ui__pack__title border_line">- popup</h3>
+    <div class="rules_button_area" data-ui="rules_area">
+        <button data-ui="rules_btn" data-toggle="false">RULES</button>
+        <div class="source_code"></div>
+    </div>
+    <div>
+        <div style='height:100px'>
+            <!-- top banner popup -->
+            <div style='height:80px; background-color:gray;'>
+                topbanner
+            </div>
+            <div>
+                <input type="checkbox" id="chkbox" value="checkbox" style="display:inline-block;" />
+                <label for="chkbox" style="display:inline;">오늘 하루 이창을 열지않음</label>
+                <a href="#">닫기</a>
+            </div>
         </div>
         <div>
+            <!-- mobal btn pop -->
             <div>
-                <!-- top banner popup -->
+                <button>click</button>
             </div>
-            <div>
-                <!-- mobal btn pop -->
+            <div class="grid col-3">
+                <div class="grid_row" data-ui="page_wrap">
+                    <div class="grid_inner">
+                        <div class="grid_inner_item">
+                            <div class="page__wrap">
+                                <button class="trigger">CLICK</button>
+                            </div>
+                            <div class="modal__wrap" data-ui="modal_wrap">
+                                <div class="modal__container">
+                                    <div class="modal__head">
+                                        <a class="btn_close trigger">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="modal__content">
+                                        <div class="good_job">
+                                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                            <h1>Good Job!</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    
+        <div>
+            <!-- popup -->
+            <div id="divpop" style="position:fixed;left:100px;top:139px;z-index:4000;visibility:hidden;">
+                <div style="height:500px; position: relative;">
+                    popup
+                </div>
+                <table width="400" cellpadding="2" cellspacing="0">
+                    <tr>
+                        <td align="center" style="color:#000; font-size:11px; padding:5px 0; vertical-align: middle; background:#fff; border:1px solid #ccc; ">
+                            <input type="checkbox" id="chkbox" value="checkbox" style="vertical-align:middle; margin-right:5px; display:inline-block;">오늘
+                            하루 이 창을 열지 않음
+                            <a style="color:#000; margin-left: 5px;" href="javascript:closeWin('divpop', 'chkbox', 'maindiv');"><B>[닫기]</B></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
+
+</div>
