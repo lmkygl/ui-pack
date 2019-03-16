@@ -1,6 +1,5 @@
-// 회원가입시 input값 유효성 검사
-(function () {
-    function checkform() {
+(function(){
+    function sendIt() {
         var email = document.f.my_add.value;
         var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
          var jumin1 = document.f.my_num.value.substr(0,6);
@@ -58,7 +57,7 @@
             document.f.my_pwd.select()
             return false;
         }
- 
+    
         //비밀번호와 비밀번호 확인 일치여부 체크
         if (document.f.my_pwd.value != document.f.my_pwd1.value) {
             alert("비밀번호가 일치하지 않습니다")
@@ -66,14 +65,14 @@
             document.f.my_pwd1.focus()
             return false;
         }
- 
+    
         if (document.f.my_add.value == "") {
             alert("이메일을 입력하지 않았습니다.")
             document.f.my_add.focus()
             return false;
         }
         
- 
+    
         if (regex.test(email) === false) {
             alert("잘못된 이메일 형식입니다.");
             document.f.my_add.value=""
@@ -159,8 +158,19 @@
                  alert("관심분야를 체크해 주세요");
                  return false;
               }
+          
+          if(document.f.my_intro.value== ""){
+              alert("자기소개를 입력해주십시오.");
+              document.f.my_intro.focus()
+              return false;
+          }
+          if(document.f.my_intro.length>100){
+              alert("자기소개는 100자 이내입니다.");
+              document.f.my_intro.focus()
+              return false;
+          }
         }
- 
+    
          
         function isNumeric(s) { 
           for (i=0; i<s.length; i++) { 
@@ -185,8 +195,7 @@
           if (c == 10) c = 0;
           if (c != parseInt(s2.substr(6, 1))) return false;
           else return true;
- 
-        document.checkform.submit()
+    
+        document.f.submit()
     }
-
-}());
+}())
